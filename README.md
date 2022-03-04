@@ -1,6 +1,6 @@
 ### USA TAX API
 
-https://img.shields.io/endpoint?url=&label=FastAPI&style=flat-square&logo=fastapi
+https://img.shields.io/badge/FastAPI-0.74.1-blue
 
 **Stephan Randle**
 
