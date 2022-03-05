@@ -1,0 +1,20 @@
+// fk foreign key prefix
+Table state {
+    id int [pk, increment]
+    name text
+    tax int
+    fk_year int 
+}
+
+Table federal {
+    id int [pk, increment]
+    tax int
+    fk_year int
+}
+
+Table year {
+    id int [pk, increment]
+    year text
+    fk_states int[]
+    fk_federal int
+}
