@@ -1,20 +1,47 @@
-// fk foreign key prefix
+Table year {
+    id int [pk, increment]
+    year text
+    fk_states int
+    fk_federal int
+}
+
 Table state {
     id int [pk, increment]
     name text
-    tax int
-    fk_year int 
+    income_tax int
+    sales_tax int
+    property_tax int
 }
 
 Table federal {
     id int [pk, increment]
-    tax int
-    fk_year int
+    fk_status int
+    
+    fk_tax_bracket int
 }
 
-Table year {
-    id int [pk, increment]
-    year text
-    fk_states int[]
-    fk_federal int
+Table tax_bracket {
+  id int [pk, increment]
+  rate int
+  bracket_start int
+  bracket_end int
+  fk_year int
+  fk_status int
+  fk_federal int
 }
+
+Table status {
+  id int [pk, increment]
+  name text
+}
+
+
+
+
+Ref: "federal"."fk_status" < "status"."id"
+
+Ref: "federal"."fk_tax_bracket" < "tax_bracket"."id"
+
+Ref: "year"."fk_federal" < "federal"."id"
+
+Ref: "year"."fk_states" < "state"."id"

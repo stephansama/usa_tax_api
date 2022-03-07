@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get('/')
 async def root():
-    """_summary_
+    """Changed the description
 
     Returns:
         _type_: _description_
