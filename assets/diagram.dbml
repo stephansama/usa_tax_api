@@ -23,8 +23,8 @@ Table federal {
 Table tax_bracket {
   id int [pk, increment]
   rate int
-  bracket_start int
-  bracket_end int
+  start int
+  end int
   fk_year int
   fk_status int
   fk_federal int

@@ -19,6 +19,12 @@ A RESTful API for United State's Taxes
 
 ### Endpoints
 
+| Endpoint   | Description                    | Response Type   |
+| ---------- | ------------------------------ | --------------- |
+| /states/   | return a list of state objects | List[State]     |
+| /state     |                                |                 |
+| ---------- | ------------------------------ | --------------- |
+
 ### Example Responses
 
 ### Contributors
