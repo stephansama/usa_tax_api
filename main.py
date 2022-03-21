@@ -1,16 +1,20 @@
 from fastapi import FastAPI
-from const import *
 from api import federal, state, year
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
-federal.router
 
 app = FastAPI(
-    title=APPLICATION_NAME,
-    version=APPLICATION_VER,
-    description=APPLICATION_DESC,
-    contact=APPLICATION_CONTACT,
-    license_info=APPLICATION_LICENSE
+    title=os.getenv('APP_NAME'),
+    version=os.getenv('APP_VER'),
+    description=os.getenv('APP_DESC'),
+    license_info={"name": os.getenv('APP_LICENSE')},
+    contact={
+        "name": os.getenv('APP_CONTACT_NAME'),
+        "email": os.getenv('APP_CONTACT_EMAIL')
+    }
 )
 
 
