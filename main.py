@@ -19,5 +19,5 @@ app = FastAPI(
 
 
 app.include_router(federal.router)
-# app.include_router(state.router)
-# app.include_router(year.router)
+app.include_router(state.router)
+app.include_router(year.router)
