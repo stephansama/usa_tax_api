@@ -4,9 +4,9 @@ from sqlalchemy import Column, Text, Integer, String, Boolean, ForeignKey
 
 from ..setup import Base
 
-from .year import Year
+from .state import State
 
 
-class State(Base):
-    __tablename__ = "state"
+class Year(Base):
+    __tablename__ = "year"
     id = Column(Integer, primary_key=True, index=True)
