@@ -1,9 +1,15 @@
 from fastapi import FastAPI
-from api import federal, state, year
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
+
+from api import feds, states, years
+from database.setup import engine
+from database.models import state, year
+
+state.Base.metadata.create_all(bind=engine)
+year.Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI(
@@ -18,6 +24,6 @@ app = FastAPI(
 )
 
 
-app.include_router(federal.router)
-app.include_router(state.router)
-app.include_router(year.router)
+app.include_router(feds.router)
+app.include_router(states.router)
+app.include_router(years.router)
