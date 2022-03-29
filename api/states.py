@@ -1,19 +1,31 @@
-from optparse import Option
-from typing import Optional
-from fastapi import APIRouter, Path, Query
+# Stephan Randle
+# 03 / 24 / 2022
+#
+# State Router
+#
+#
+from typing import Optional, List
+from fastapi import APIRouter, Path, Query, Depends
+
+from sqlalchemy.orm import Session
+
+from .utils.states import find_state
+from database import setup
+from database.schemas.state import State 
 
 router = APIRouter()
 
 
-@router.get('/state/{state_id}')
+@router.get('/state/{state_id}', response_model=State)
 async def get_state_info(
     state_id: int = Path(
-        ..., description="")
+        ..., description=""),
+    db: Session = Depends(setup.get_db)
 ):
     """
     Get individual state tax object
     """
-    ...
+    return find_state(db, state_id)
 
 
 @router.get('/states')
