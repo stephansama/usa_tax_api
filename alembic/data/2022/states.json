@@ -1,0 +1,30 @@
+[
+    {
+        "name": "MI",
+        "income_tax":4.25,
+        "sales_tax": 6,
+        "property_tax":1.45,
+        "year_id": 1
+    },
+    {
+        "name": "KY",
+        "income_tax":5.00,
+        "sales_tax":6.00,
+        "property_tax":0.83,
+        "year_id": 1
+    },
+    {
+        "name": "NY",
+        "income_tax":10.9,
+        "sales_tax":3.876,
+        "property_tax":8.875,
+        "year_id": 1
+    },
+    {
+        "name": "MO",
+        "income_tax":5.40,
+        "sales_tax":10.350,
+        "property_tax":0.93,
+        "year_id": 1
+    }
+]

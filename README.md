@@ -17,17 +17,13 @@ A RESTful API for United State's Taxes
 
 ![Schema](assets/schema.png)
 
-### Endpoints
-
-| Endpoint   | Description                    | Response Type   |
-| ---------- | ------------------------------ | --------------- |
-| /states/   | return a list of state objects | List[State]     |
-| /state     |                                |                 |
-| ---------- | ------------------------------ | --------------- |
-
 ### Example Responses
 
-### Contributors
+### Contributing
+
+pydantic schemas located @database/schemas/
+sqlalchemy orm models located @database/models/
+migration folder located @alembic/
 
 ### Useful Websites
 
@@ -35,6 +31,4 @@ A RESTful API for United State's Taxes
 
 ### Contributors
 
--   Chris Basham
--   Stephan Randle
--   Timmy Do
+-   [Stephan Randle](https://github.com/stephansama)
