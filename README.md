@@ -21,13 +21,16 @@ A RESTful API for United State's Taxes
 
 ### Contributing
 
-pydantic schemas located @database/schemas/
-sqlalchemy orm models located @database/models/
 migration folder located @alembic/
-
-### Useful Websites
+pydantic schemas located @database/schemas/
+routes located @api/
+route utility functions located @api/utils
+sqlalchemy orm models located @database/models/
 
 <!-- https://smartasset.com/taxes/income-taxes#tax-calculators -->
+
+### TODO:
+
 
 ### Contributors
 
