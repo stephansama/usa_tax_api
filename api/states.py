@@ -3,15 +3,15 @@
 #
 # State Router
 #
-#
+
+# library imports
 from typing import Optional, List
 from fastapi import APIRouter, Path, Query, Depends
-
 from sqlalchemy.orm import Session
-
-from .utils.states import find_state
+# local imports
 from database import setup
-from database.schemas.state import State 
+from database.schemas.state import State
+from .utils.states import find_state
 
 router = APIRouter()
 
@@ -42,5 +42,5 @@ async def get_states_info(
     """
     return {
         "year": year,
-        "results": end - start if end else 0
+        "results": end - start if end else 50
     }
