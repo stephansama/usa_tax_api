@@ -6,7 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from database.setup import Base
-from database.models import state, year
+from database.models import federal, state, year
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
